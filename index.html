@@ -12,9 +12,9 @@
    
    <div class="btns">
     <div>
-      <button id="splkeys" onclick="appendToDisplay('')">AC</button>
-      <button  onclick="clearDisplay()">DE</button>
-      <button onclick="appendToDisplay('/')">/</button>
+      <button id="splkeys" onclick="clearDisplay()">AC</button>
+      <button  onclick="DeleteLastDigit()">DE</button>
+      <button onclick="operateDisplay('/')">/</button>
     </div>
 
     <div>
@@ -41,7 +41,7 @@
       <div>
         <button onclick="appendToDisplay('0')">0</button>
         <button onclick="appendToDisplay('.')">.</button>
-        <button id="splkeys" onclick="appendToDisplay('=')">=</button>
+        <button id="splkeys" onclick="operateDisplay('=')">=</button>
       </div>
     </div>
 
