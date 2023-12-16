@@ -39,6 +39,9 @@ function operate(operator, num1, num2) {
   }
 }
 
+var displayValue = '';
+
+
 // function to display the typed value //
 
 function appendToDisplay(value) {
@@ -57,3 +60,5 @@ function DeleteLastDigit() {
   document.getElementById("display");
   display.value = display.value.slice(0, -1);
 }
+
+   // function to do calculator operation //
