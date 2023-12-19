@@ -6,7 +6,8 @@
 body {
   height: 100vh;
   /* background: linear-gradient(to bottom, #3498db, #2ecc71); */
-  background: linear-gradient(to bottom, white, skyblue);
+  background: linear-gradient(to right, skyblue, white);
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,14 +28,14 @@ button {
   cursor: pointer;
   border: none;
   margin: 5px;
-  background-color: grey;
-  color: white;
+  background-color: white;
+  color: skyblue;
 }
 .calculator {
   display: flex;
   flex-direction: column;
   background: transparent;
-  background-color: rgb(61, 59, 59);
+  background: linear-gradient(to right, white, skyblue);
   padding: 50px;
   border-radius: 15px;
   margin: 50px auto;
@@ -45,11 +46,11 @@ button {
   height: 100px;
   width: 380px;
   max-width: 450px;
-  background: grey;
+  background: white;
   border: none;
   border-radius: 10px;
   font-size: 35px;
-  color: white;
+  color: skyblue;
   padding: 10px;
 }
 .footer {
