@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Orbitron', sans-serif;
 }
 .btns {
   display: grid;
@@ -24,12 +28,13 @@ button {
   width: 70px;
   height: 70px;
   border-radius: 50px;
-  font-size: 30px;
+  font-size: 35px;
   cursor: pointer;
   border: none;
   margin: 5px;
   background-color: white;
   color: skyblue;
+  font-family: 'Orbitron', sans-serif;
 }
 .calculator {
   display: flex;
@@ -52,6 +57,7 @@ button {
   font-size: 35px;
   color: skyblue;
   padding: 10px;
+  font-family: 'Orbitron', sans-serif;
 }
 .footer {
   margin-top: auto; /* Push the footer to the bottom of the container */
