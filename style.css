@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 * {
   margin: 0;
@@ -8,7 +7,7 @@
 }
 body {
   height: 100%;
-width: 100%;
+  width: 100%;
   /* background: linear-gradient(to bottom, #3498db, #2ecc71); */
   background: linear-gradient(to right, skyblue, white);
   background-color: white;
@@ -16,7 +15,7 @@ width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 .btns {
   display: grid;
@@ -35,7 +34,7 @@ button {
   margin: 5px;
   background-color: white;
   color: skyblue;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 .calculator {
   display: flex;
@@ -57,8 +56,7 @@ button {
   font-size: 45px;
   color: skyblue;
   padding: 10px;
-  font-family: 'Orbitron', sans-serif;
-  
+  font-family: "Orbitron", sans-serif;
 }
 
 .footer {
