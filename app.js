@@ -22,22 +22,21 @@ const divide = function (a, b) {
   }
 };
 
-function operate(operator, num1, num2) {
+function operate(operator, a, b) {
   switch (operator) {
     case "+":
-      return add(num1, num2);
+      return add(a, b);
     case "-":
-      return subtract(num1, num2);
+      return subtract(a, b);
     case "*":
-      return multiply(num1, num2);
+      return multiply(a, b);
     case "/":
-      return divide(num1, num2);
+      return divide(a, b);
     default:
       return "Invalid operator";
   }
 }
 
-// Function to update the display when a number button is clicked
 function appendToDisplay(num) {
   if (operator === "") {
     num1 += num;
@@ -48,9 +47,17 @@ function appendToDisplay(num) {
   }
 }
 
-// Handle multiple decimal points
-function handleDecimal(value) {
-  if (!num1.includes(".") && !num2.includes(".")) {
+function handleDecimal() {
+  // Check if the current number already contains a decimal point
+  if (value === "." && ((operator === "" && !num1.includes(".")) || (operator !== "" && !num2.includes(".")))) {
+    if (operator === "") {
+      num1 += value;
+    } else {
+      num2 += value;
+    }
+    updateDisplay(value);
+  } else if (value !== ".") {
+    // If the value is not a decimal point, append it to the current number
     if (operator === "") {
       num1 += value;
     } else {
@@ -60,7 +67,8 @@ function handleDecimal(value) {
   }
 }
 
-// Function to clear the display and reset variables
+
+
 function clearDisplay() {
   document.getElementById("display").value = "";
   num1 = "";
@@ -69,22 +77,20 @@ function clearDisplay() {
   updateDisplay('');
 }
 
-// Function to delete the last digit from the display
-function DeleteLastDigit() {
-  document.getElementById("display");
+function deleteLastDigit() {
+  let display = document.getElementById("display");
   display.value = display.value.slice(0, -1);
 }
 
-
-// Function to update the operator
 function setOperator(selectedOperator) {
   if (num1 !== "") {
+    if (num2 !== "") {
+      calculate();
+    }
     operator = selectedOperator;
-    
   }
 }
 
-// Function to perform the calculation when the "=" key is pressed
 function calculate() {
   if (num1 !== "" && num2 !== "" && operator !== "") {
     let result = operate(
@@ -92,11 +98,14 @@ function calculate() {
       parseFloat(num1),
       parseFloat(num2)
     ).toString();
-    console.log("Result:", result);
-    document.getElementById("display").value = result;
+    num1 = result;
+    num2 = "";
+    operator = "";
+    updateDisplay(result);
   }
 }
 
 function updateDisplay(value) {
   document.getElementById("display").value = value;
 }
+
