@@ -46,6 +46,7 @@ button {
   border-radius: 15px;
   margin: 50px auto;
   border: 2px solid white;
+  margin-bottom: 60px;
 }
 #display {
   text-align: right;
@@ -91,4 +92,15 @@ input:focus {
 }
 ::placeholder{
   color: skyblue;
+}
+
+.title {
+  background: linear-gradient(45deg, darkgrey, black, darkgrey);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
 }
