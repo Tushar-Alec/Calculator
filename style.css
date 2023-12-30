@@ -89,3 +89,6 @@ button:hover {
 input:focus {
   outline: none;
 }
+::placeholder{
+  color: skyblue;
+}
