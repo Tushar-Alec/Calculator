@@ -95,12 +95,18 @@ input:focus {
 }
 
 .title {
-  background: linear-gradient(45deg, darkgrey, black, darkgrey);
+  background: white;
   -webkit-background-clip: text;
   color: transparent;
   font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 120px;
-}
+  margin-top: 140px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  }
+
+  .title:hover {
+    transform: scale(1.5);
+  }
