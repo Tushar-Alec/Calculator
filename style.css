@@ -42,6 +42,7 @@ button {
   flex-direction: column;
   background: transparent;
   background-color: skyblue;
+  /* background: linear-gradient(to bottom, #3498db, #2ecc71); */
   padding: 50px;
   border-radius: 15px;
   margin: 50px auto;
