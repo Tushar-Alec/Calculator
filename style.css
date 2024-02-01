@@ -72,12 +72,14 @@ button {
   height: 40px;
   font-size: 20px;
   margin-bottom: 20px;
-  color: white;
+  color: black;
 }
 a {
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 2px;
+  display: flex;
+  align-items: center;
 }
 
 #splkeys {
@@ -112,4 +114,8 @@ input:focus {
 
   .title:hover {
     transform: scale(1.5);
+  }
+  svg {
+    width: 30px;
+    height: 30px;
   }
