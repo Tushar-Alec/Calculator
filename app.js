@@ -77,7 +77,7 @@ function clearDisplay() {
   updateDisplay('');
 }
 
-function deleteLastDigit() {
+function DeleteLastDigit() {
   let display = document.getElementById("display");
   display.value = display.value.slice(0, -1);
 }
