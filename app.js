@@ -47,6 +47,7 @@ function appendToDisplay(num) {
   }
 }
 
+
 function handleDecimal() {
   // Check if the current number already contains a decimal point
   if (value === "." && ((operator === "" && !num1.includes(".")) || (operator !== "" && !num2.includes(".")))) {
