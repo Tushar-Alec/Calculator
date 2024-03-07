@@ -39,36 +39,17 @@ function operate(operator, a, b) {
 
 function appendToDisplay(num) {
   if (operator === "") {
-    num1 += num;
-    updateDisplay(num1);
+    if (!num1.includes(".") || num !== ".") {
+      num1 += num;
+      updateDisplay(num1);
+    }
   } else {
-    num2 += num;
-    updateDisplay(num2);
+    if (!num2.includes(".") || num !== ".") {
+      num2 += num;
+      updateDisplay(num2);
+    }
   }
 }
-
-
-function handleDecimal() {
-  // Check if the current number already contains a decimal point
-  if (value === "." && ((operator === "" && !num1.includes(".")) || (operator !== "" && !num2.includes(".")))) {
-    if (operator === "") {
-      num1 += value;
-    } else {
-      num2 += value;
-    }
-    updateDisplay(value);
-  } else if (value !== ".") {
-    // If the value is not a decimal point, append it to the current number
-    if (operator === "") {
-      num1 += value;
-    } else {
-      num2 += value;
-    }
-    updateDisplay(value);
-  }
-}
-
-
 
 function clearDisplay() {
   document.getElementById("display").value = "";
